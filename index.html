@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knock A Rodent - Let's Beat the Mole</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <!-- home page -->
+    <div id="main-container">
+      <div class="heading">
+        <h1 class="gameName">Knock-A-Rodent</h1>
+      </div>
+      <div class="homeBtn">
+        <button id="home-btn">Start Game</button>
+      </div>
+
+      <div class="displayAll">
+        <div class="scoreTime">
+          <h2 id="highScore">High Score : <span>0</span></h2>
+          <h2 id="currentScore">Current Score : <span>0</span></h2>
+          <h2 id="timeLeft">Time Left : <span>10</span></h2>
+        </div>
+        <div class="displayBtns">
+          <button class="btns" id="newGame">Start New Game</button>
+          <button class="btns" id="exitGame">Quit</button>
+          <button class="btns" id="pauseResume">Pause</button>
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box" id="box-1">
+          <img src="assets/mole.png" alt="mole" id="mole" />
+        </div>
+        <div class="box" id="box-2"></div>
+        <div class="box" id="box-3"></div>
+        <div class="box" id="box-4"></div>
+        <div class="box" id="box-5"></div>
+        <div class="box" id="box-6"></div>
+        <div class="box" id="box-7"></div>
+        <div class="box" id="box-8"></div>
+      </div>
+    </div>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
