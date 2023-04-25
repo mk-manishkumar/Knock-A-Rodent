@@ -25,10 +25,6 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* #main-container {
-  height: 100vh;
-} */
-
 #main-container .heading .gameName {
   color: #ffffff;
   text-align: center;
@@ -104,9 +100,9 @@ body {
   padding: 8px 28px;
 }
 
-#mole {
-  height: 200px;
-  width: 200px;
+.mole {
+  background: url(../assets/mole.png);
+  background-size: cover;
 }
 
 /* MEDIA QUERIES */
@@ -128,20 +124,10 @@ body {
     width: 120px;
     height: 120px;
   }
-
-  #mole {
-    width: 120px;
-    height: 120px;
-  }
 }
 
 @media (max-width: 675px) {
   .box {
-    width: 90px;
-    height: 90px;
-  }
-
-  #mole {
     width: 90px;
     height: 90px;
   }
@@ -164,7 +150,9 @@ body {
   }
 
   .scoreTime h2 {
-    border: none;
+    font-size: 17px;
+    width: 70%;
+    margin: auto;
     text-align: center;
   }
 
@@ -175,9 +163,11 @@ body {
 
 @media (max-width: 385px) {
   .displayBtns {
-    flex-direction: column;
-    width: 50%;
-    margin: auto;
+    justify-content: space-evenly;
   }
 
+  .displayBtns button{
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 }

@@ -20,20 +20,25 @@
 
       <div class="displayAll">
         <div class="scoreTime">
-          <h2 id="highScore">High Score : <span>0</span></h2>
-          <h2 id="currentScore">Current Score : <span>0</span></h2>
-          <h2 id="timeLeft">Time Left : <span>10</span></h2>
+          <h2>
+            High Score : <span id="highScore" style="font-weight: 600"></span>
+          </h2>
+          <h2>
+            Current Score :
+            <span id="currentScore" style="font-weight: 600"></span>
+          </h2>
+          <h2 class="timeBox">
+            Time Left : <span id="timeLeft" style="font-weight: 600"></span>
+          </h2>
         </div>
         <div class="displayBtns">
-          <button class="btns" id="newGame">Start New Game</button>
+          <button class="btns" id="restart">Restart</button>
           <button class="btns" id="exitGame">Quit</button>
           <button class="btns" id="pauseResume">Pause</button>
         </div>
       </div>
       <div class="boxes">
-        <div class="box" id="box-1">
-          <img src="assets/mole.png" alt="mole" id="mole" />
-        </div>
+        <div class="box mole" id="box-1"></div>
         <div class="box" id="box-2"></div>
         <div class="box" id="box-3"></div>
         <div class="box" id="box-4"></div>
