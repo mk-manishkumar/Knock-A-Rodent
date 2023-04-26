@@ -1,7 +1,6 @@
 const homeBtn = document.querySelector("#home-btn");
 const homeBtnSection = document.querySelector(".homeBtn");
 const displayAll = document.querySelector(".displayAll");
-const restart = document.querySelector("#restart");
 const exitGame = document.querySelector("#exitGame");
 const timeBox = document.querySelector(".timeBox");
 const body = document.querySelector("body");
@@ -46,13 +45,18 @@ const countDown = () => {
   timeLeft.textContent = `${timeLeftNow}`;
 
   if (timeLeftNow === 0) {
+    gameMusic.pause();
     clearInterval(timerId);
     clearInterval(randomMoleId);
     allBox.style.display = "none";
     timeBox.style.display = "none";
     pauseResume.style.display = "none";
-    restart.textContent = "New Game";
     body.style.background = "#8D3DAF";
+    gameMusic.currentTime = 0;
+    homeBtnSection.style.display = "flex";
+    homeBtn.innerHTML = "Start New Game";
+    homeBtn.style.color = "#8D3DAF";
+    exitGame.style.color = "#8D3DAF";
     // update high score
     updateHighScore(currentScoreValue);
   }
@@ -63,11 +67,10 @@ randomMole();
 // function for starting a game
 const startGame = () => {
   body.style.background = "#22CB5C";
+  exitGame.style.color = "#000";
   allBox.style.display = "grid";
   timeBox.style.display = "inline";
   pauseResume.style.display = "inline";
-  restart.textContent = "Restart";
-
   currentScoreValue = 0;
   timeLeftNow = 60;
 
@@ -75,6 +78,7 @@ const startGame = () => {
   timeLeft.innerHTML = "60";
   allBox.style.display = "grid";
   pauseResume.innerHTML = "Pause";
+  window.scrollTo(0, document.body.scrollHeight);
   gameMusic.play();
   timerId = setInterval(randomMole, 1000);
   randomMoleId = setInterval(countDown, 1000);
@@ -134,6 +138,3 @@ exitGame.addEventListener("click", () => location.reload());
 
 // after clicking pause/resume button at game screen
 pauseResume.addEventListener("click", pauseResumeGame);
-
-// after clicking restart button at game screen
-restart.addEventListener("click", startGame);
